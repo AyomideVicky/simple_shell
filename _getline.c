@@ -15,8 +15,8 @@ char *_getline(FILE *stream)
 	nread = getline(&lineptr, &n, stream);
 	if (nread == EOF)
 	{
-		free (lineptr);
-		exit (EXIT_SUCCESS);
+		free(lineptr);
+		exit(EXIT_SUCCESS);
 	}
 
 	return (lineptr);
