@@ -2,13 +2,10 @@
 
 /**
  * main - Entry Point
- * @argc: argument count
- * @argv: Argument Vector
- * Return - always 0
+ * Return: always 0
  */
 
-
-int main(int argc __attribute__((unused)), char *argv[] __attribute__((unused)))
+int main(void)
 {
 	char *line, *path, *fullpath;
 	char **token;
@@ -19,8 +16,7 @@ int main(int argc __attribute__((unused)), char *argv[] __attribute__((unused)))
 	{
 		prompt(STDOUT_FILENO, buf);
 		line = _getline(stdin);
-		printf("%s", line);
-		if (strcmp(line, "\n") == 0)
+		if (_strcmp(line, "\n", 1) == 0)
 		{
 			free(line);
 			continue;
